@@ -2,17 +2,21 @@
   <div id="app">
     <SideBar id="menu"></SideBar>
     <div id="main">
-      <router-view></router-view>
+      <Breadcrumb id="breadcrumb"></Breadcrumb>
+      <div id="main-content">
+        <router-view></router-view>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 import SideBar from "@/components/SideBar";
+import Breadcrumb from "@/components/Breadcrumb";
 
 export default {
   name: "app",
-  components: { SideBar }
+  components: { SideBar, Breadcrumb }
 };
 </script>
 
@@ -43,5 +47,14 @@ body,
 #main {
   margin-left: 210px;
   height: 100%;
+  #breadcrumb {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    padding: 15px 0 0 15px;
+  }
+  #main-content {
+    padding: 15px;
+  }
 }
 </style>

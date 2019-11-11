@@ -8,7 +8,7 @@
         active-text-color="#ffd04b"
         router
       >
-        <template v-for="item in $router.options.routes" >
+        <template v-for="item in $store.state.permission.routers" >
           <el-submenu v-if="item.children" index="1" :key="item.path">
             <template slot="title">
               {{item.meta.title}}
@@ -28,9 +28,6 @@
 
 <script>
 export default {
-  name: "SideBar",
-  // created() {
-  //   console.log(this.$router)
-  // }
+  name: "SideBar"
 }
 </script>

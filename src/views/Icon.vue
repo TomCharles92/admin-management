@@ -4,6 +4,9 @@
 
 <script>
 export default {
-  name: "Icon"
+  name: "Icon",
+  mounted() {
+    // console.log(this.$router)
+  }
 }
 </script>
